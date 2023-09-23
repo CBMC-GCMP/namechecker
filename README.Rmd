@@ -1,4 +1,4 @@
-use_---
+---
 output: github_document
 ---
 
@@ -52,5 +52,3 @@ final_data <- get_valid_names(species_list)
 glimpse(final_data)
 
 ```
-
-
