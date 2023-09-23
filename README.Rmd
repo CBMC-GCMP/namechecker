@@ -1,0 +1,56 @@
+use_---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# namechecker
+
+<!-- badges: start -->
+![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+<!-- badges: end -->
+
+The package is designed to seamlessly interface with the WoRMS (World Register of Marine Species) API, 
+providing a straightforward method for verifying the acceptance of species names. 
+While there are other packages available that offer functionalities centered around the WoRMS API,
+we found that many of them come with complex documentation and offer a multitude of tools that extend 
+beyond our basic requirement of name validation. Our package aims to simplify this process by focusing 
+solely on the essential task of checking the acceptance status of species names, making it more user-friendly 
+and easier to navigate.
+
+## Installation
+
+You can install the development version of namechecker from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("CBMC-GCMP/namechecker")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example, message=FALSE, warning=FALSE}
+library(namechecker)
+library(dplyr)
+
+species_list <- sample_species_names[c(1:3)]
+
+final_data <- get_valid_names(species_list)
+
+glimpse(final_data)
+
+```
+
+

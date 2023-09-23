@@ -1,0 +1,28 @@
+Package: namechecker
+Title: Check Species Names Using Worms API
+Version: 0.0.0.9000
+Authors@R: 
+    person("Fabio", "Favoretto", , "ffavoretto@ucsd.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-6493-4254"))
+Description: The package is designed to seamlessly interface with the WoRMS (World Register of Marine Species) API, 
+    providing a straightforward method for verifying the acceptance of species names. 
+    While there are other packages available that offer functionalities centered around the WoRMS API,
+    we found that many of them come with complex documentation and offer a multitude of tools that extend 
+    beyond our basic requirement of name validation. Our package aims to simplify this process by focusing 
+    solely on the essential task of checking the acceptance status of species names, making it more user-friendly 
+    and easier to navigate.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    dplyr,
+    httr,
+    jsonlite,
+    magrittr,
+    purrr,
+    rlang,
+    tidyselect
+Depends: 
+    R (>= 2.10)
+LazyData: true
